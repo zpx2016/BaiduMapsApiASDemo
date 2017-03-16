@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.feicui.baidumap">
 
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
@@ -28,6 +29,11 @@
                 android:name="com.baidu.lbsapi.API_KEY"
                 android:value="com.feicui.baidumap" />
         </application>
+
+
+        <service android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process="remote"></service>
 
 
         <activity android:name=".MainActivity">
